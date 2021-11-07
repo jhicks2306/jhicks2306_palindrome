@@ -7,7 +7,19 @@ class Jhicks2306PalindromeTest < Minitest::Test
     refute_nil ::Jhicks2306Palindrome::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_non_palindrome
+    assert !"apple".palindrome?
+  end
+
+  def test_literal_palindrome
+    assert "racecar".palindrome?
+  end
+
+  def test_mixed_case_palindrome
+    skip
+  end
+
+  def test_palindrome_with_punctuation
+    skip
   end
 end
