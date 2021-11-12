@@ -6,7 +6,7 @@ require_relative "jhicks2306_palindrome/version"
 #   class Error < StandardError; end
 #   # Your code goes here...
 # end
-class String
+module Jhicks2306Palindrome
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
@@ -17,7 +17,14 @@ class String
 
   # Returns content for palindrome testing
   def processed_content
-    scan(/[a-z]/i).join.downcase
+    to_s.scan(/[a-z0-9]/i).join.downcase
   end
+end
 
+class String
+  include Jhicks2306Palindrome
+end
+
+class Integer
+  include Jhicks2306Palindrome
 end
