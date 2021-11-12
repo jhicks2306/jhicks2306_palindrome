@@ -10,14 +10,14 @@ class String
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content.downcase == processed_content.reverse
+    processed_content == processed_content.reverse
   end
 
   private
 
   # Returns content for palindrome testing
   def processed_content
-    self.to_s.downcase
+    scan(/[a-z]/i).join.downcase
   end
-  
+
 end
