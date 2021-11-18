@@ -2,16 +2,16 @@
 
 require_relative "jhicks2306_palindrome/version"
 
-# module Jhicks2306Palindrome
-#   class Error < StandardError; end
-#   # Your code goes here...
-# end
 module Jhicks2306Palindrome
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content == processed_content.reverse
+    if processed_content.empty?
+      false
+    else
+      processed_content == processed_content.reverse
   end
+end
 
   private
 

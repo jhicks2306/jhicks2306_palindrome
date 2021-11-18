@@ -28,4 +28,7 @@ class Jhicks2306PalindromeTest < Minitest::Test
     assert 12321.palindrome?
   end
 
+  def test_empty_string
+    refute "".palindrome?
+  end
 end
